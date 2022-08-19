@@ -5,7 +5,7 @@ import argparse
 import os
 import re
 
-from utils import config
+from src.utils import config
 
 
 def split_name(name):

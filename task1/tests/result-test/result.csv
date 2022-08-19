@@ -1,0 +1,7 @@
+name,price,above_100,first_name,last_name
+William Davidson,123.45,True,William,Davidson
+Alex Gregory MD,77.89,False,Alex,Gregory
+Mrs. Susan Scholes,83.12,False,Susan,Scholes
+Dr. Ramses Sulaiman III,101.01,True,Ramses,Sulaiman
+Suparjo,55.6,False,Suparjo,
+Alexander Graham Bell,10.1,False,Alexander Graham,Bell
