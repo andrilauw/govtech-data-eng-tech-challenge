@@ -2,7 +2,7 @@
 IMAGE_NAME=data-pipeline-task
 IMAGE_TAG=latest
 
-.PHONY: all print build test run run-local
+.PHONY: all print build test run run-local run run-debug destroy
 
 print:
 	echo $(IMAGE_NAME):$(IMAGE_TAG)
@@ -15,7 +15,7 @@ test:
 
 # For running on local machine
 run-local:
-	python -m src.main
+	python -m src.main --datasource_folder ./datasource --result_folder ./result
 
 run:
 	docker run \
@@ -31,3 +31,6 @@ run-debug:
 		-v ${PWD}/result:/workdir/result/ \
 		--entrypoint=/bin/bash \
 		$(IMAGE_NAME):$(IMAGE_TAG)
+
+destroy:
+	docker ps | grep data-pipeline-task | awk '{print $$1}' | xargs docker rm --force
