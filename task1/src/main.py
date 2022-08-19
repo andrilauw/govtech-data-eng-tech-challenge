@@ -10,15 +10,18 @@ from utils import config
 
 def split_name(name):
     split_name = name.split(" ")
+
     # filter prefix and suffix
     # TODO: implement logic prefix suffix
     # assumption: prefix always ends with '.'
     if split_name[0].endswith("."):
         split_name = split_name[1:]
+
     # assumption: suffix are all capital letter, consist of two or more of alphabets
     suffix_pattern = r"[A-Z]{2,}"
     if re.match(suffix_pattern, split_name[-1]):
         split_name = split_name[:-1]
+
     # name which has more than two words excluding prefix and suffix,
     # only last word will be taken as last_name, the rest would be concatenated
     # and placed as first_name
@@ -30,6 +33,7 @@ def split_name(name):
     else:
         first_name = split_name[0]
         last_name = ""
+
     return [first_name, last_name]
 
 
