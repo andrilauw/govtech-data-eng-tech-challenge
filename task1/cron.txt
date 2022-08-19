@@ -1,2 +1,2 @@
 SHELL=/bin/bash
-* * * * * cd /workdir && /usr/local/bin/python -m src.main --datasource_folder /workdir/datasource --result_folder /workdir/result >> logs.txt 2>&1
+0 1 * * * cd /workdir && /usr/local/bin/python -m src.main --datasource_folder /workdir/datasource --result_folder /workdir/result >> logs.txt 2>&1
