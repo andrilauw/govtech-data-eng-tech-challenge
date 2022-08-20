@@ -2,7 +2,7 @@
 IMAGE_NAME=data-pipeline-task
 IMAGE_TAG=latest
 
-.PHONY: all print build test run run-local run run-debug destroy
+.PHONY: all print build test run run-local run-debug exec destroy
 
 print:
 	echo $(IMAGE_NAME):$(IMAGE_TAG)
@@ -32,5 +32,8 @@ run-debug:
 		--entrypoint=/bin/bash \
 		$(IMAGE_NAME):$(IMAGE_TAG)
 
+exec:
+	docker ps | grep $(IMAGE_NAME) | awk '{print $$1}' | xargs -o -I% docker exec -it % bash
+
 destroy:
-	docker ps | grep data-pipeline-task | awk '{print $$1}' | xargs docker rm --force
+	docker ps | grep $(IMAGE_NAME) | awk '{print $$1}' | xargs docker rm --force
