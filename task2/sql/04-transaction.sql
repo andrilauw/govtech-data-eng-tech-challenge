@@ -3,6 +3,7 @@ CREATE TABLE IF NOT EXISTS transaction (
     customer_id int NOT NULL,
     salesperson_id int NOT NULL,
     car_id int NOT NULL,
+    timestamp timestamp NOT NULL,
     CONSTRAINT fk1_customer
       FOREIGN KEY(customer_id) 
         REFERENCES customer(customer_id)

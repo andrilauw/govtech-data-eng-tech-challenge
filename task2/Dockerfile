@@ -4,12 +4,6 @@ RUN apt-get update -y && apt-get install -y procps
 
 WORKDIR /workdir
 
-# COPY ./requirements.txt /workdir/
-# RUN pip install -r requirements.txt
-
-# COPY ./src /workdir/src/
-# COPY ./datasource /workdir/datasource/
-# COPY ./cron.txt /workdir/
 RUN mkdir -p /docker-entrypoint-initdb.d
 COPY ./sql/* /docker-entrypoint-initdb.d/
 COPY ./login.sh /workdir/
