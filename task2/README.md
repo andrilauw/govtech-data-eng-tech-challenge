@@ -8,6 +8,12 @@ The solution includes:
 - SQL DML statements to pump data to the tables
 - SQL DML statements to simulate user queries
 
+## Solution Overview
+
+The solution provided uses official Postgres Docker image from Dockerhub for its base image with minimal modification.
+
+The SQL DDL and DML statements to bootstrap the tables are being placed in a startup directory (as indicated in the [official documentation](https://hub.docker.com/_/postgres)), and will be executed upon startup.
+
 ## ER Diagram
 
 ![ER Diagram](./ER_Diagram.png)
@@ -52,9 +58,8 @@ There are two SQL directories in this project, namely:
 
         make destroy
 
-## Solution Overview
+## Future Improvements
 
-The solution provided uses official Postgres Docker image from Dockerhub for its base image with minimal modification.
 If you notice, the solution uses the default `postgres` user, default `postgres` database, and without strong authentication and authorization strategy, which is not suitable for production grade deployment. Furthermore, no resource tuning has been made as well to accomodate real-world traffic. Also the current mode of deployment is a single-node architecture, which the node itself becomes a single point of failure without any high availability properties.
 
 However, for the sake of this exercise, which main focus is to demonstrate data modelling, all the infrastructure shortcomings above will be left for future improvement.
