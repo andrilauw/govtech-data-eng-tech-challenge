@@ -53,6 +53,6 @@ For the original problem, the Decision Tree algorithm also predicted that the bu
 
 ## Future Improvements
 
-By no means the result shown here are the best results. In fact, it is even a far cry from what can be called good predictors. The result is a far from satisfactory. However, this is just my attempt to solve the problem given since I'm not a domain expert in ML field.
+By no means the result shown here are the best results. In fact, it is even a far cry from what can be called good predictors. The result is far from satisfactory. However, this is just my attempt to solve the problem given I'm not a domain expert in ML field.
 
 There are tons of things which can be done to improve the result, such as, trying and finding more suitable algorithm, tuning the hyperparameter properly, selecting the correct features, etc.
