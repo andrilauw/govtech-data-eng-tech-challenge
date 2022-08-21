@@ -30,5 +30,5 @@ The following chart is the total number of confirmed Covid-19 cases over time in
 
     Your browser will then open a new tab, navigating to `http://localhost:8888/tree`. If your browser does not automatically open the URL, please open it manually in your browser.
 
-3. Go to the last cell where you can see the generated chart by `matplotlib` package. If no chart appear, execute all the commands one by one from top to bottom by pressing `Shift + Enter` on each cell in orderly manner.
+3. Open the `covid_sg_visualisation.ipyng` notebook, go to the last cell where you can see the generated chart by `matplotlib` package. If no chart appear, execute all the commands one by one from top to bottom by pressing `Shift + Enter` on each cell in orderly manner.
 
