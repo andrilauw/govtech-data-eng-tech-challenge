@@ -12,7 +12,6 @@ def split_name(name):
     split_name = name.split(" ")
 
     # filter prefix and suffix
-    # TODO: implement logic prefix suffix
     # assumption: prefix always ends with '.'
     if split_name[0].endswith("."):
         split_name = split_name[1:]
